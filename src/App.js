@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Square from "./component/Square.js"
 
 function App() {
   const [matrix, setMatrix] = useState(Array(9).fill(null));
@@ -41,19 +42,19 @@ function App() {
       <div className='Board'>
         <div className="Status">{status}</div>
         <div className='Row'>
-          <div className='Square' onClick={() => updateMatrix(0)}>{matrix[0]}</div>
-          <div className='Square' onClick={() => updateMatrix(1)}>{matrix[1]}</div>
-          <div className='Square' onClick={() => updateMatrix(2)}>{matrix[2]}</div>
+          <Square onClick={() => updateMatrix(0)}>{matrix[0]}</Square>
+          <Square onClick={() => updateMatrix(1)}>{matrix[1]}</Square>
+          <Square onClick={() => updateMatrix(2)}>{matrix[2]}</Square>
         </div>
         <div className='Row'>
-          <div className='Square' onClick={() => updateMatrix(3)}>{matrix[3]}</div>
-          <div className='Square' onClick={() => updateMatrix(4)}>{matrix[4]}</div>
-          <div className='Square' onClick={() => updateMatrix(5)}>{matrix[5]}</div>
+          <Square onClick={() => updateMatrix(3)}>{matrix[3]}</Square>
+          <Square onClick={() => updateMatrix(4)}>{matrix[4]}</Square>
+          <Square onClick={() => updateMatrix(5)}>{matrix[5]}</Square>
         </div>
         <div className='Row'>
-          <div className='Square' onClick={() => updateMatrix(6)}>{matrix[6]}</div>
-          <div className='Square' onClick={() => updateMatrix(7)}>{matrix[7]}</div>
-          <div className='Square' onClick={() => updateMatrix(8)}>{matrix[8]}</div>
+          <Square onClick={() => updateMatrix(6)}>{matrix[6]}</Square>
+          <Square onClick={() => updateMatrix(7)}>{matrix[7]}</Square>
+          <Square onClick={() => updateMatrix(8)}>{matrix[8]}</Square>
         </div>
       </div>
     </div>
